@@ -2,16 +2,18 @@
 
 <h2>Please complete all information below</h2>
 
-<%= form_for [@user, @referral] do |f| %>
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name, autofocus: true %>
+<div class="large-6 columns">
+  <%= form_for [@user, @referral] do |f| %>
+    <h3 class="subheader"><%= f.label :first_name %>
+    <%= f.text_field :first_name, autofocus: true %></h3>
 
-  <%= f.label :last_name %>
-  <%= f.text_field :last_name %>
+    <h3 class="subheader"><%= f.label :last_name %>
+    <%= f.text_field :last_name %></h3>
 
-  <%= f.label :email %>
-  <%= f.text_field :email %>
+    <h3 class="subheader"><%= f.label :email %>
+    <%= f.email_field :email %></h3>
 
-  <%= submit_tag "Send invite" %>
-<% end %>
+    <%= submit_tag "Send invite", class: "medium success radius button" %>
+  <% end %>
+</div>
 
