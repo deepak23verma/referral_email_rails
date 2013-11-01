@@ -17,7 +17,7 @@
         <td><%= referral.first_name %></td>
         <td><%= referral.last_name %></td>
         <td><%= referral.email %></td>
-        <%= referral. %>
+        <td><%= referral.created_at.strftime("%b %e, %Y @ %l:%M%P") %></td>
       </tr>
     <% end %>
   </tbody>
