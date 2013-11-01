@@ -1,0 +1,17 @@
+<h1>Referral Invite</h1>
+
+<h2>Please complete all information below</h2>
+
+<%= form_for [@user, @referral] do |f| %>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name, autofocus: true %>
+
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+
+  <%= submit_tag "Send invite" %>
+<% end %>
+
