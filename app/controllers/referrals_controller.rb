@@ -11,8 +11,8 @@ class ReferralsController < ApplicationController
     @referral.user_id = current_user.id
     if @referral.save
       ReferralMailer.invite_email(@referral).deliver
-      redirect_to user_path(current_user.id) 
-      # :notice => "Invite sent to #{@referral.first_name}"
+      redirect_to user_path(current_user.id), 
+      :notice => "Invite sent to #{@referral.first_name}"
     else
       render :new, :notice => "Please fill in all the required fields"
     end

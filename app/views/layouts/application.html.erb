@@ -14,7 +14,7 @@
   	<!-- Set the viewport width to device width for mobile -->
   	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+  	<title><%= content_for?(:title) ? yield(:title) : "eProf" %></title>
 
   	<%= stylesheet_link_tag    "application" %>
   	<%= javascript_include_tag "vendor/custom.modernizr" %>
@@ -25,7 +25,11 @@
     <div class="small-10 large-centered columns">
       <%= render "layouts/nav" %>
       <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+        <% if name == :notice %>
+          <%= content_tag :div, msg, :class => "alert-box success" %>
+        <% else %>
+          <%= content_tag :div, msg, :class => "alert-box alert" %>
+        <% end %>
       <% end %>
       <%= yield %>
     </div>
