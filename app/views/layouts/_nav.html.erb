@@ -9,6 +9,10 @@
       <ul class="right">
         <li class="divider"></li>
         <% if current_user %>
+          <li class="divider"></li>
+          <li class="active">
+            <%= link_to "Refer a Friend", new_user_referral_path(current_user.id), class: "tiny success radius button" %>
+          </li>
           <li class="active"><%= link_to current_user.email, user_path(current_user) %></li>
           <li class="divider"></li>
           <li class="active"><%= link_to "Log out", logout_path %></li>

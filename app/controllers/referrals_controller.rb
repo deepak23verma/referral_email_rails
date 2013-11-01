@@ -3,7 +3,7 @@ class ReferralsController < ApplicationController
   before_filter :set_user
 
   def index
-    @referrals = @user.referrals
+    @referrals = @user.referrals.sort_by {|referral| referral.created_at}.reverse
   end
 
   def new
