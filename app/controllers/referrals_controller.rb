@@ -10,7 +10,7 @@ class ReferralsController < ApplicationController
     @referral = @user.referrals.build(params[:referral])
     @referral.user_id = current_user.id
     if @referral.save
-      # ReferralMailer.invite_email(@referral).deliver
+      ReferralMailer.invite_email(@referral).deliver
       redirect_to user_path(current_user.id) 
       # :notice => "Invite sent to #{@referral.first_name}"
     else

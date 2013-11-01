@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      Hello <%= @referral.first_name.capitalize %>,
+    </p>
+
+    <p>
+      Your friend <%= "#{@user.first_name} #{@user.last_name}" %>, thinks you would make one awesome eProf. Like any good friend <%= @user.first_name %> wants to introuce you to something you will excel at!
+    </p>
+
+    <h2> eProf's Mission</h2>
+    <p>Give educators and education businesses an easy and affordable way to launch their very own online academy.</p>
+
+    <a href="http://vimeo.com/69912372">Short overview video</a>
+
+    <h3><%= link_to "Sign up", new_user_url %> today for your FREE trial account</h3>
+
+    <p>We are here to help get you started!</p>
+
+    <p>Sincerely,</p>
+    <p>eProf</p>
+  </body>
+</html>
