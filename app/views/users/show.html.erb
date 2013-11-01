@@ -3,4 +3,4 @@
 <h3><%= link_to "Refer a Friend", new_user_referral_path(current_user.id) %></h3>
 
 
-<h3><%= @user.first_name %> has sent <%= link_to "#{@user.referrals.size}", @url %> referral emails out since becoming a member</h3>
+<h3><%= @user.first_name %> has sent <%= link_to "#{@user.referrals.size}", user_referrals_path(@user) %> referral emails out since becoming a member</h3>

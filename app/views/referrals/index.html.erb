@@ -1,0 +1,24 @@
+<h1>Referrals#Index</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Referral ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Date Referred</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @referrals.each do |referral| %>
+      <tr>
+        <td><%= referral.id %></td>
+        <td><%= referral.first_name %></td>
+        <td><%= referral.last_name %></td>
+        <td><%= referral.email %></td>
+        <%= referral. %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
